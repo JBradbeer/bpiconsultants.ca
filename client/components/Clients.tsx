@@ -1,14 +1,10 @@
 import React from 'react';
-import {
-    Typography,
-  } from '@mui/material';
 
-
-export default function ContactUs () {
+export default function Clients () {
   return (
-    <div className='clients'>
+    <div className='clients section'>
       {/* OUR CLIENTS HEADER */}
-      <h3 className='section-header'>Our Clients</h3>
+      <h3 className='section-header'> OUR CLIENTS </h3>
 
       {/* CLIENT LIST */}
       <div className='client-list'>
