@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
+
+body {
+    margin: 0;
+}
+
+@mixin cleanList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    line-height: 33px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.section {
+    text-align: center;
+    width: 70%;
+    max-width: 800px;
+    margin: 70px 0 0 0;
+
+    color: #4c4845;
+
+    .section-header {
+        // &:before {
+        //     content: "-----";
+        // }
+        // &:after {
+        //     content: "-----";
+        // }
+    }
+}
+
+#landing {
+    background-image: url('./images/glovebox-exterior2.jpeg');
+    background-size: contain;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #landing-title {
+        text-align: center;
+        background-color: white;
+        background: rgba(255,255,255,.6);
+        padding: 1rem;
+    }
+}
+
+#nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    // padding: 10px;
+
+    ul {
+        @include cleanList;
+        display: flex;
+        justify-content: right;
+        gap: 10px;
+    }
+}
+
+#about-us {
+
+    #main-about {
+        text-align: left;
+        display: flex;
+        // justify-content: space-between;
+        float:right;
+        // gap: 30px;
+
+        #dave-card {
+            // width: 1000px;
+            // height: 200px;
+            // border: solid black;
+        }
+    }
+
+    #bpi-awards {
+        @include cleanList
+    }
+}
