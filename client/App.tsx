@@ -1,12 +1,15 @@
 import React from 'react';
-import MainContainer from './components/MainContainer';
-import './style.scss';
+import Services from './components/Services'
+import AboutUs from './components/AboutUs'
+import ContactUs from './components/ContactUs'
 
 const App = () => {
-  
-return (
-    <MainContainer />
-)
+  return (
+  <div>
+    <AboutUs />
+    <Services />
+    <ContactUs />
+  </div>)
 }
 
 export default App;
