@@ -17,7 +17,7 @@ export default function Services() {
     };
 
   return (
-    <div className='services section'>
+    <div id='services' className='section'>
       {/* SERVICES HEADER */}
       <h3 className='section-header'> WHAT WE OFFER </h3>
 

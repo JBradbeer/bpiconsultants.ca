@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Clients () {
   return (
-    <div className='clients section'>
+    <div id='clients' className='section'>
       {/* OUR CLIENTS HEADER */}
       <h3 className='section-header'> OUR CLIENTS </h3>
 

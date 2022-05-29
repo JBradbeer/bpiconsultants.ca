@@ -1,7 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
 
+$bpilogo-blue: #95B3D7;
+$bpilogo-grey: #555555;
+$bpilogo-green: #C3D69B;
+$bpilogo-brown: #948A54;
+
+$nav-height: 50px;
+
 body {
     margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    line-height: 33px;
 }
 
 @mixin cleanList {
@@ -10,10 +20,79 @@ body {
     padding: 0;
 }
 
+#nav-bar {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: $nav-height;
+
+    display: flex;
+    justify-content: space-between;
+
+    background-color: white;
+
+    ul {
+        @include cleanList;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+
+        font-size: 1.1rem;
+        font-weight: 9000;
+
+        $gap-distance: 45px;
+        gap: $gap-distance;
+        padding-right: $gap-distance;
+
+        a {
+            $nav-colour: black;
+
+            text-decoration:none !important;
+            color: $nav-colour;
+            &:visited {
+                color: $nav-colour
+            }
+            &:hover {
+                color: $bpilogo-blue;
+            }
+        }
+    }
+
+    $nav-trans-speed: 1s;
+
+    &.nav-bar-hidden {
+        transition: $nav-trans-speed;
+        transform: translateY(calc(-1 * $nav-height));
+    }
+
+    &.nav-bar-not-hidden {
+        transition: $nav-trans-speed;
+    }
+}
+
+#landing {
+    background-image: url('./images/glovebox-exterior2.jpeg');
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    height: 100vh;
+    width: 100%;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #landing-title {
+        text-align: center;
+        background-color: white;
+        background: rgba(255,255,255,.6);
+        padding: 1rem;
+    }
+}
+
 #content {
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    line-height: 33px;
+    // padding-top: $nav-height;
 
     display: flex;
     flex-direction: column;
@@ -29,44 +108,13 @@ body {
     color: #4c4845;
 
     .section-header {
+        color: black;
         // &:before {
         //     content: "-----";
         // }
         // &:after {
         //     content: "-----";
         // }
-    }
-}
-
-#landing {
-    background-image: url('./images/glovebox-exterior2.jpeg');
-    background-size: contain;
-    height: 100vh;
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    #landing-title {
-        text-align: center;
-        background-color: white;
-        background: rgba(255,255,255,.6);
-        padding: 1rem;
-    }
-}
-
-#nav-bar {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    // padding: 10px;
-
-    ul {
-        @include cleanList;
-        display: flex;
-        justify-content: right;
-        gap: 10px;
     }
 }
 
@@ -87,6 +135,9 @@ body {
     }
 
     #bpi-awards {
-        @include cleanList
+        @include cleanList;
+        a {
+            text-decoration:none !important;
+        }
     }
 }
