@@ -12,6 +12,7 @@ html{scroll-behavior:smooth}
 
 body {
     margin: 0;
+    padding: 0;
     font-family: 'FFDINWebLight', sans-serif;
     font-size: 20px;
     line-height: 33px;
@@ -73,12 +74,15 @@ body {
         display: flex;
         justify-content: right;
         align-items: center;
+        flex-shrink: 2;
 
         font-size: 1.1rem;
         font-weight: 100;
+        text-align: center;
+        line-height: normal;
 
         gap: $gap-distance;
-        padding-right: $gap-distance;
+        padding: 0 $gap-distance;
 
         a {
             $nav-colour: black;
@@ -153,7 +157,6 @@ body {
     align-items: center;    
 }
 
-
 #about {
 
     #main-about {
@@ -192,41 +195,43 @@ body {
         width: 100%;
         background-color: $bpilogo-brown;
     }
+
     #client-list {
         @include cleanList;
         @include cleanLink;
+
         ul {
-            color: $site-grey;
-            $cols: 3;
-            $gaps: 20px;
-            -moz-column-count: cols;
-            -webkit-column-count: cols;
-            column-count: cols;
-            -moz-column-gap: gaps;
-            -webkit-column-gap: gaps;
-            column-gap: gaps;
+            border: solid blue;
 
+            $d-columns: 2;
+            columns: 30px $d-columns;
+            -webkit-columns: 30px $d-columns;
+            -moz-columns: 30px $d-columns;
 
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            justify-content: center;
-            // max-height: 240px;
+            column-fill: balance;
+            page-break-inside: avoid;
+            break-inside: avoid-column;
+
+            @media only screen and (max-width: 768px) {
+                $m-columns: 1;
+                columns: $m-columns;
+                -webkit-columns: $m-columns;
+                -moz-columns: $m-columns;
+            }
 
             .client {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 padding-bottom: 15px;
-
-                img {
-                    margin: 10px;
-                    height: 60px;
-                    width: 200px;
-
-                }
+                border: solid red;
 
                 a {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-content: center;
+
                     $award-colour: $bpilogo-grey;
                     color: $award-colour;
                     &:visited {
@@ -235,23 +240,84 @@ body {
                     &:hover {
                         color: $bpilogo-grey;
                     }
+                    img {
+                        margin: 10px;
+                        max-height: 70px;
+                        width: auto;
+                        // max
+                    }
                 }
             }
         }
     }
 }
 
-#footer {
-    $font-colour: white;
+footer {
+    $footer-colour: white;
+    font-size: 1.1rem;
+    font-weight: 100;
 
-    padding-top: 50px;
+    margin: 0;
+    padding: 10% 10% 0;
     background-color: $site-grey;
-    color: $font-colour;
-    width: 100%;
+    color: $footer-colour;
 
+    #footer-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 10%;
 
-    #copyright {
-        font-size: 14px;
+        .footer-content-box {
+            vertical-align: top;
+            // border: solid red;
+        }
+
+        #footer-socials {
+            #footer-socials-logos {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+    
+                img {
+                    width: 40px; height: 40px;
+                }
+            }
+        }
+    }
+
+    hr.solid {
+        border: 1px solid white;
+    }
+
+    #footer-meta {
+        display: flex;
+        justify-content: space-between;
+
+        margin: 0px;
+
+        #jake-signoff {
+            @include cleanLink;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+
+            a {   
+                p {
+                    margin: 0;
+                    // padd
+                }
+                
+                color: $footer-colour;
+                &:visited {
+                    color: $footer-colour
+                }
+                &:hover {
+                    color: $footer-colour;
+                }
+            }
+        }
     }
     
 
