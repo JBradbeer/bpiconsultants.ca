@@ -23,6 +23,17 @@ body {
     padding: 0;
 }
 
+@mixin cleanLink {
+    a {
+        text-decoration:none !important;
+    }
+}
+
+@mixin partialWidth {
+    width: 70%;
+    max-width: 800px;
+}
+
 #nav-bar {
     $gap-distance: 35px;
 
@@ -46,6 +57,7 @@ body {
         .logo-text {
             h1 {
                 font-size: 40px;
+                color: $bpilogo-grey;
             }
     
         }
@@ -57,6 +69,7 @@ body {
 
     ul {
         @include cleanList;
+        @include cleanLink;
         display: flex;
         justify-content: right;
         align-items: center;
@@ -70,7 +83,6 @@ body {
         a {
             $nav-colour: black;
 
-            text-decoration:none !important;
             color: $nav-colour;
             &:visited {
                 color: $nav-colour
@@ -141,19 +153,120 @@ body {
     align-items: center;    
 }
 
+
+#about {
+
+    #main-about {
+        text-align: left;
+        display: flex;
+        // justify-content: space-between;
+        float:right;
+        // gap: 30px;
+
+        #dave-card {
+            // width: 1000px;
+            // height: 200px;
+            // border: solid black;
+        }
+    }
+
+    #bpi-awards {
+        @include cleanList;
+        @include cleanLink;
+
+        a {
+            $award-colour: $bpilogo-brown;
+            color: $award-colour;
+            &:visited {
+                color: $award-colour
+            }
+            &:hover {
+                color: $bpilogo-grey;
+            }
+        }
+    }
+}
+
+#clients {
+    #reccomendations {
+        width: 100%;
+        background-color: $bpilogo-brown;
+    }
+    #client-list {
+        @include cleanList;
+        @include cleanLink;
+        ul {
+            color: $site-grey;
+            $cols: 3;
+            $gaps: 20px;
+            -moz-column-count: cols;
+            -webkit-column-count: cols;
+            column-count: cols;
+            -moz-column-gap: gaps;
+            -webkit-column-gap: gaps;
+            column-gap: gaps;
+
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            // max-height: 240px;
+
+            .client {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 15px;
+
+                img {
+                    margin: 10px;
+                    height: 60px;
+                    width: 200px;
+
+                }
+
+                a {
+                    $award-colour: $bpilogo-grey;
+                    color: $award-colour;
+                    &:visited {
+                        color: $award-colour
+                    }
+                    &:hover {
+                        color: $bpilogo-grey;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    $font-colour: white;
+
+    padding-top: 50px;
+    background-color: $site-grey;
+    color: $font-colour;
+    width: 100%;
+
+
+    #copyright {
+        font-size: 14px;
+    }
+    
+
+}
+
 .section {
     text-align: center;
-    width: 70%;
     max-width: 800px;
+    width: 70%;
     margin: 70px 0 0 0;
-
     color: $site-grey;
 
     .section-header {
         color: black;
-        // &:before {
-        //     content: "-----";
-        // }
+
         &:before, &:after {
             content: "";
             background-color: #000;
@@ -176,67 +289,3 @@ body {
     }
 }
 
-#about {
-
-    #main-about {
-        text-align: left;
-        display: flex;
-        // justify-content: space-between;
-        float:right;
-        // gap: 30px;
-
-        #dave-card {
-            // width: 1000px;
-            // height: 200px;
-            // border: solid black;
-        }
-    }
-
-    #bpi-awards {
-        @include cleanList;
-        a {
-            text-decoration:none !important;
-        }
-    }
-}
-
-#clients {
-    #reccomendations {
-        width: 100%;
-    }
-}
-
-#footer {
-    $font-colour: white;
-
-    padding-top: 50px;
-    background-color: $site-grey;
-    color: $font-colour;
-    width: 100%;
-
-
-    #copyright {
-        font-size: 14px;
-    }
-    
-
-}
-
-
-
-    // ul {
-    //     @include cleanList();
-    //     display: flex;
-    //     justify-content: space-between;
-    // }
-
-    // a {
-    //     text-decoration:none !important;
-
-    //     &:visited {
-    //         color: $font-colour;
-    //     }
-    //     &:hover {
-    //         color: $bpilogo-blue;
-    //     }
-    // }
