@@ -11,39 +11,85 @@ export default function Clients () {
   const createClientList = () => {
     // FIXME: type me
     const rawClients = [
-      ['HOOPP',
-       'https://hoopp.com/'],
-       ['KingSett Capital',
-       'https://www.kingsettcapital.com/'],
-       ['Bank of Montreal (BMO)',
-       'https://www.bmo.com/main/personal'],
-       ['Citibank',
-       'https://www.citigroup.com/citi/'],
-       ['Sun Life Financial',
-       'https://www.sunlife.ca/en/'],
-       ['Ottawa-Carlton District School Board',
-       'https://ocdsb.ca/'],
-       ['Morguard Investments',
-       'https://www.morguard.com/'],
-       ['Economic Research Associates',
-       'http://www.econsresearch.com/'], //FIXME: is this the correct site
-       ['Retirement Residences REIT',
-        null],
-       ['Exchange Solutions',
-       'https://www.exchangesolutions.com/'],
-       ['Central Park Lodge',
-        null],
-       ['Hanscombs Consulting',
-       null],
-       ['Talisker Corporation',
-       'https://taliskerresources.com/'],
+      {
+        name: 'Hospitals of Ontario Pension Plan',
+        link: 'https://hoopp.com/',
+        img:  'https://ochu.on.ca/wp-content/uploads/2019/10/HOOPP-Logo-700x203.png'
+      },
+      {
+        name: 'Bank of Montreal (BMO)',
+        link: 'https://www.bmo.com/main/personal',
+        img:  'https://logos-world.net/wp-content/uploads/2021/02/BMO-Logo.png'
+      },
+      {
+        name: 'KingSett Capital',
+        link: 'https://www.kingsettcapital.com/',
+        img:  ''
+      },
+      {
+        name: 'Citibank Canada',
+        link: 'https://www.citigroup.com/citi/',
+        img:  ''
+      },
+      {
+        name: 'Sun Life Financial',
+        link: 'https://www.sunlife.ca/en/',
+        img:  ''
+      },
+      {
+        name: 'Morguard Investments',
+        link: 'https://www.morguard.com/',
+        img:  ''
+      },
+      {
+        name: 'Economic Research Associates',
+        link: 'http://www.econsresearch.com/',//FIXME: is this the correct site
+        img: null
+      },
+      {
+        name: 'Ottawa-Carlton District School Board',
+        link: 'https://ocdsb.ca/',
+        img: null
+      },
+      {
+        name: 'Exchange Solutions',
+        link: 'https://www.exchangesolutions.com/',
+        img: null
+       },
+       {
+        name: 'Talisker Corporation',
+        link: 'https://taliskerresources.com/',
+        img: null
+       },
+       {
+        name: 'Retirement Residences REIT',
+        link: null,
+        img: null
+       },
+       {
+        name: 'Central Park Lodge',
+        link: null,
+        img: null
+       },
+       {
+        name: 'Hanscombs Consulting',
+        link: null,
+        img: null
+       },
     ]
 
     let clientList:React.ReactElement[] = [];
 
     // create a anchor element for each client and push to array
     rawClients.forEach(client => {
-      clientList.push(<a href={client[1]}>{client[0]}</a>)
+      clientList.push(
+       <div className='client'>
+         {client.img ? <img src={client.img} /> : null}
+         <a href={client.link}>
+           {client.name}
+         </a>
+       </div>
+      )
     });
 
     return clientList;
