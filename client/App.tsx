@@ -1,10 +1,11 @@
 import React from 'react';
 
-import NavBar from './components/NavBar'
-import Landing from './components/Landing'
-import Services from './components/Services'
-import AboutUs from './components/AboutUs'
-import ContactUs from './components/ContactUs'
+import NavBar from './components/NavBar';
+import Landing from './components/Landing';
+import About from './components/About';
+import Services from './components/Services';
+import Clients from './components/Clients';
+import Footer from './components/Footer';
 
 import './style.scss';
 
@@ -14,9 +15,10 @@ const App = () => {
       <NavBar />
       <div id='content'>
         <Landing />
-        <AboutUs />
+        <About />
         <Services />
-        <ContactUs />
+        <Clients />
+        <Footer />
       </div>
     </>
   )

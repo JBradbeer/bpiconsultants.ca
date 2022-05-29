@@ -4,12 +4,15 @@ $bpilogo-blue: #95B3D7;
 $bpilogo-grey: #555555;
 $bpilogo-green: #C3D69B;
 $bpilogo-brown: #948A54;
+$site-grey: #4c4845;
 
-$nav-height: 50px;
+$nav-height: 65px;
+
+html{scroll-behavior:smooth}
 
 body {
     margin: 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'FFDINWebLight', sans-serif;
     font-size: 20px;
     line-height: 33px;
 }
@@ -21,6 +24,8 @@ body {
 }
 
 #nav-bar {
+    $gap-distance: 35px;
+
     position: fixed;
     top: 0; left: 0;
     width: 100%;
@@ -31,6 +36,25 @@ body {
 
     background-color: white;
 
+    .logo {
+        margin-left: $gap-distance;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+
+        .logo-text {
+            h1 {
+                font-size: 40px;
+            }
+    
+        }
+
+        img {
+            width: 60px; height: 60px;
+        }
+    }
+
     ul {
         @include cleanList;
         display: flex;
@@ -38,9 +62,8 @@ body {
         align-items: center;
 
         font-size: 1.1rem;
-        font-weight: 9000;
+        font-weight: 100;
 
-        $gap-distance: 45px;
         gap: $gap-distance;
         padding-right: $gap-distance;
 
@@ -54,6 +77,24 @@ body {
             }
             &:hover {
                 color: $bpilogo-blue;
+            }
+        }
+
+        .socials {
+            display: flex;
+            gap: calc($gap-distance / 5);
+            
+            a {
+                display: flex;
+                flex-direction: column;     /* make main axis horizontal (default setting) */
+                justify-content: space-around; /* center items horizontally, in this case */
+                align-items: center;
+            }
+
+            img {
+                width: 25px;
+                height: 25px;
+                opacity: 70%;
             }
         }
     }
@@ -71,7 +112,8 @@ body {
 }
 
 #landing {
-    background-image: url('./images/glovebox-exterior2.jpeg');
+    // background-image: url('./images/glovebox-exterior2.jpeg');
+    background-image: url('https://images.wallpaperscraft.com/image/single/bridge_railway_construction_129619_3840x2400.jpg');
     background-size: cover;
     background-position: center;
     margin: auto;
@@ -105,20 +147,36 @@ body {
     max-width: 800px;
     margin: 70px 0 0 0;
 
-    color: #4c4845;
+    color: $site-grey;
 
     .section-header {
         color: black;
         // &:before {
         //     content: "-----";
         // }
-        // &:after {
-        //     content: "-----";
-        // }
+        &:before, &:after {
+            content: "";
+            background-color: #000;
+            display: inline-block;
+            height: 2px;
+            position: relative;
+            vertical-align: middle;
+            width: 9%;
+          }
+
+          &:before {
+            right: 0.5em;
+            margin-left: -50%;
+          }
+          
+          &:after {
+            left: 0.5em;
+            margin-right: -50%;
+          }
     }
 }
 
-#about-us {
+#about {
 
     #main-about {
         text-align: left;
@@ -141,3 +199,44 @@ body {
         }
     }
 }
+
+#clients {
+    #reccomendations {
+        width: 100%;
+    }
+}
+
+#footer {
+    $font-colour: white;
+
+    padding-top: 50px;
+    background-color: $site-grey;
+    color: $font-colour;
+    width: 100%;
+
+
+    #copyright {
+        font-size: 14px;
+    }
+    
+
+}
+
+
+
+    // ul {
+    //     @include cleanList();
+    //     display: flex;
+    //     justify-content: space-between;
+    // }
+
+    // a {
+    //     text-decoration:none !important;
+
+    //     &:visited {
+    //         color: $font-colour;
+    //     }
+    //     &:hover {
+    //         color: $bpilogo-blue;
+    //     }
+    // }

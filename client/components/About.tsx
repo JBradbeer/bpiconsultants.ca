@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function AboutUs () {
+export default function About () {
   const createAwards = (): React.ReactElement[] => {
     const rawAwards = [
       ['https://bpiconsultants.ca/files/Mississauga-News-REX-Award-Article.pdf',
@@ -28,7 +28,7 @@ export default function AboutUs () {
   }
 
   return (
-    <div id='about-us' className='section'>
+    <div id='about' className='section'>
       {/* HEADER */}
       <h3 className='section-header'> WHO WE ARE </h3>
 
