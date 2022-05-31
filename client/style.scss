@@ -22,6 +22,10 @@ body {
     line-height: 33px;
 }
 
+* {
+    box-sizing: border-box;
+  }
+
 @mixin cleanList {
     list-style-type: none;
     margin: 0;
@@ -40,6 +44,7 @@ body {
 }
 
 #nav-bar {
+    z-index: 1000;
     $gap-distance: 35px;
 
     position: fixed;
@@ -195,6 +200,91 @@ body {
     }
 }
 
+#projects {
+    $gap-gutter-projects: 50px;
+    margin: $gap-gutter-projects;
+
+    font-size: medium;
+
+    #projects-overview {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $gap-gutter-projects;
+
+        @media only screen and (max-width: 600px){
+            grid-template-columns: 1fr;
+        }
+    
+        
+
+        .project {
+
+            img {
+                height: 50vh;
+                width: 100%;
+                margin: 5px 0;
+                transition: 0.5s;
+                object-fit: cover;
+                vertical-align: middle;
+    
+                &:hover {
+                    transition: 0.5s;
+                    -webkit-filter: brightness(30%);
+                }
+
+                @media only screen and (max-width: 400px) {
+                    height: 30vh;
+                }
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                gap: 2px;
+
+                line-height: normal;
+
+                @media only screen and (max-width: 800px) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .name {
+                    text-transform: uppercase;
+                    letter-spacing: .01em;
+                    text-align: left !important;
+                }
+
+                > * {
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+            @mixin project-minor-text {
+                font-weight: 100;
+                padding: 0;
+                margin: 0;
+            }
+
+            .minor {
+                @include project-minor-text();
+                text-align: right;
+
+            }
+
+            .address {
+                @include project-minor-text();
+
+                display: flex;
+                justify-content:baseline;
+                vertical-align: top;
+            }
+        }
+    }
+}
+
 #testimonials {
     background-color: $bpilogo-blue;
     color: #FFF;
@@ -271,8 +361,9 @@ body {
 }
 
 #clients {
-
     #client-list {
+        // height: 10000px;
+
         @include cleanList;
         @include cleanLink;
 
@@ -381,6 +472,12 @@ footer {
                 }
             }
         }
+
+        @media only screen and (max-width: 700px) {
+            flex-direction: column;
+            grid-template-columns: auto;
+            grid-template-rows: 1fr 1fr;
+        }
     }
 
     hr.solid {
@@ -432,6 +529,7 @@ footer {
     // max-width: 800px;
     margin: 70px 0 0 0;
     color: $site-black;
+    margin-bottom: 300px;
 
     .section-header {
         color: black;

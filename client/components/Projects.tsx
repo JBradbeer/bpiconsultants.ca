@@ -40,10 +40,10 @@ export default function Projects () {
       image: 'https://uploads-ssl.webflow.com/58caaa4eca21145179969d22/5f407b4354a6e4359d49c4ae_AeroCentre%20V%20-%20Sweeny%26Co%20Architects%20-%20P02_LR%20-%20Shai%20Gil%20-%20exterior%20evening%20shot%20looking%20south.jpg'
     },
     {
-      name: 'Citibank Canada',
+      name: 'Citigroup Place',
       address: 'Kitchener, ON',
       type: 'Office',
-      client: 'KingSett Capital',
+      client: 'Citibank Canada',
       value: 500000000,
       dateCompleted: '2006',
       image: 'https://bpiconsultants.ca/images/portfolio/citi_building_small.jpeg'
@@ -54,16 +54,16 @@ export default function Projects () {
   rawProjects.forEach(proj => {
     projects.push(
       <div className='project'>
-        <div className='project-header'>
-          <h3 className='project-name'>{proj.name}</h3>
-          <h3 className='project-minor'>{
+        <div className='header'>
+          <h3 className='name'>{proj.name}</h3>
+          <h3 className='minor'>{
             proj.dateCompleted ? 
               `Completed ${proj.dateCompleted}` : 
               'Under Construction'}
           </h3>
         </div>
         <img src={proj.image} alt={`photo of ${proj.name}`} />
-        <h4 className='project-minor project-address'>{proj.address} </h4>
+        <h3 className='address'>{proj.address} </h3>
       </div>
     )
   });
