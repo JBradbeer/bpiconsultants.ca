@@ -8,7 +8,7 @@ $site-grey: #4c4845;
 $site-black: #212427;
 
 $nav-height: 65px;
-$text-width: 70%;
+$gutter: 50px;
 
 html{
     scroll-behavior:smooth
@@ -201,17 +201,16 @@ body {
 }
 
 #projects {
-    $gap-gutter-projects: 50px;
-    margin: $gap-gutter-projects;
+    margin: $gutter;
 
     font-size: medium;
 
     #projects-overview {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: $gap-gutter-projects;
+        gap: 40px;
 
-        @media only screen and (max-width: 600px){
+        @media only screen and (max-width: 850px){
             grid-template-columns: 1fr;
         }
     
@@ -290,14 +289,15 @@ body {
     color: #FFF;
 
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    padding: $gutter;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 100px;
+    gap: 100%;
 
 
     h3 {
@@ -362,8 +362,6 @@ body {
 
 #clients {
     #client-list {
-        // height: 10000px;
-
         @include cleanList;
         @include cleanLink;
 
