@@ -8,6 +8,7 @@ A **completely** over-engineered full-stack rebuild of bpiconsultants.ca, launch
 <code><img height="22" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"></code>
 <code><img height="22" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"></code>
 <code><img height="22" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"></code>
+<code><img height="22" src="https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black"></code>
 
 ## Contact: 
 This website was designed, built and deployed by Jake Bradbeer. Contact me below.
