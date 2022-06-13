@@ -8,23 +8,25 @@ import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
 import Clients from './components/Clients';
 import Footer from './components/Footer';
+import Test from './components/Test'
 
 import './style.scss';
 
 const App = () => {
   return (
-    <>
-      <NavBar />
-      <div id='content'>
-        <Landing />
-        <About />
-        <Services />
-        <Projects />
-        <Testimonials />
-        <Clients />
-      </div>
-      <Footer />
-    </>
+    <Test />
+    // <>
+    //   <NavBar />
+    //   <div id='content'>
+    //     <Landing />
+    //     <About />
+    //     <Services />
+    //     <Projects />
+    //     <Testimonials />
+    //     <Clients />
+    //   </div>
+    //   <Footer />
+    // </>
   )
 }
 

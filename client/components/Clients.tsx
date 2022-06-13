@@ -16,7 +16,7 @@ export default function Clients () {
         img:  'http://1eglintonsquare.ca/wp-content/uploads/sites/21/2017/01/KingSett.png'
       },
       {
-        name: 'Citibank Canada',
+        name: 'Citibank',
         link: 'https://www.citigroup.com/citi/',
         img:  'https://logos-download.com/wp-content/uploads/2016/03/Citibank_logo.png'
       },

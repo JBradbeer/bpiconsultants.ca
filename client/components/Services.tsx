@@ -33,8 +33,8 @@ export default function Services() {
         <div className='image'>
           <img src={service.photo} alt={`photo for ${service.title}`} />
         </div>
-        <h3>{service.title}</h3>
-        <h4>{service.description}</h4>
+        <h3 className='title'>{service.title}</h3>
+        <h4 className='description'>{service.description}</h4>
       </div>
     );
   });
@@ -45,6 +45,7 @@ export default function Services() {
       <div className='cards'>
         {services}
       </div>
+      <h3>Sunt esse qui nulla consectetur aliquip commodo ea aute cillum sint excepteur adipisicing aliquip culpa. Cillum incididunt minim occaecat exercitation eiusmod ipsum ipsum sunt do.</h3>
     </section>
   );
 }

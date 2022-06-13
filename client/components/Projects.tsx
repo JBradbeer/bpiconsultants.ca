@@ -8,6 +8,7 @@ type ProjectType = {
   value: number,
   dateCompleted: string | null,
   image: string,
+  description?: string,
 }
 
 export default function Projects () {
@@ -19,7 +20,8 @@ export default function Projects () {
       client: 'KingSett Capital',
       value: 500000000,
       dateCompleted: null,
-      image: 'https://lh3.googleusercontent.com/_xdwSeB7iFGB2m2OJHPLjmeOBJrzS8OLpB7SJWxVhB3W7UZ4oKtCTkGtELbtEuUbl1sLsQ=w16383'
+      image: 'https://lh6.googleusercontent.com/JyY4KuGtcMVNQs2RuW0pP7ckuWN1RV179qjOeUN_TMD7FgVdoMs15RTCIaE1DROQwa224Q=w16383',
+      description: 'Sunt pariatur pariatur labore eu ex. Nisi non veniam veniam nostrud reprehenderit. Proident nisi veniam Lorem Lorem reprehenderit id commodo officia aliqua nostrud. Non cillum elit irure tempor incididunt dolor laboris non excepteur elit. Enim incididunt amet aute sint adipisicing reprehenderit nulla ea cupidatat dolore consectetur nulla anim excepteur. Aliqua pariatur ex qui nisi consectetur fugiat do do voluptate. Reprehenderit velit dolore labore do laborum culpa.'
     },
     {
       name: 'Spectrum Square',
@@ -28,11 +30,12 @@ export default function Projects () {
       client: 'HOOPP',
       value: 500000000,
       dateCompleted: '2017',
-      image: 'https://bpiconsultants.ca/images/portfolio/spectrum_day_view.jpg'
+      image: 'https://uploads-ssl.webflow.com/58caaa4eca21145179969d22/5a733b3dbe67fa00012d0961_Spectrum%20Square%20-%20Sweeny%26Co%20Architects%20-%20P09_LR%20-%20doublespace%20photography%20-%20exterior%20dusk%20north%20facade.jpg',
+      description: 'Aute do ut nulla esse ad do est non mollit duis minim duis. Eu ullamco velit qui ex ut laboris elit id nisi reprehenderit. Ad incididunt cupidatat Lorem enim do proident minim sunt culpa. Commodo consectetur amet aute sint in consectetur qui. Eu culpa enim commodo sint do esse duis minim do magna. Pariatur incididunt non eu mollit officia sit occaecat exercitation ut irure sint nisi pariatur ipsum.'
     },
     {
       name: 'Aerocentre V',
-      address: 'Kitchener, ON',
+      address: 'Mississauga, ON',
       type: 'Office / Campus',
       client: 'KingSett Capital',
       value: 500000000,
@@ -41,7 +44,7 @@ export default function Projects () {
     },
     {
       name: 'Citigroup Place',
-      address: 'Kitchener, ON',
+      address: 'Toronto, ON',
       type: 'Office',
       client: 'Citibank Canada',
       value: 500000000,
@@ -62,7 +65,12 @@ export default function Projects () {
               'Under Construction'}
           </h3>
         </div>
-        <img src={proj.image} alt={`photo of ${proj.name}`} />
+        <div className='img-container'>
+          <div className='hidden-overlay'>
+            
+          </div>
+          <img src={proj.image} alt={`photo of ${proj.name}`} />
+        </div>
         <h3 className='address'>{proj.address} </h3>
       </div>
     )

@@ -30,7 +30,12 @@ export default function About () {
       {/* ABOUT */}
       <div id='main-about'>
         <p>
-          Founded in July 2000, BPI Consultants provides development management services for the real estate sector. The company’s principal is J. David Bradbeer, P.Eng., MBA. David has over 30 years experience in various branches of real estate and experience in all sectors of real estate including commercial, medical, industrial, institutional, residential, retail, LEED and P3’s.
+          <div id='dave-card'>
+            <img src='https://www.bpiconsultants.ca/images/david.jpg' alt='' />
+            <h2>David Bradbeer, P.Eng., MBA</h2>
+            <h3>President</h3>
+          </div>
+          BPI Consultants provides development management services. The company’s principal is J. David Bradbeer, P.Eng., MBA. David has over 30 years experience in various branches of real estate and experience in all sectors of real estate including commercial, medical, industrial, institutional, residential, retail, LEED and P3’s.
           <br />
           <br />
           Prior to founding BPI, David was with an international real estate consulting firm and with a mid-sized general contractor, design-builder and developer. David has a B.A.Sc. in Civil Engineering from the University of Waterloo and an MBA from the University of Toronto (Rotman).
@@ -42,8 +47,6 @@ export default function About () {
           <strong>We are proud to announce that our project, AeroCentre V, has won four prestigious industry awards:</strong>
         </p>
         {/* DAVE CARD */}
-        <div id='dave-card'>
-        </div>
       </div>
 
       {/* AWARDS */}

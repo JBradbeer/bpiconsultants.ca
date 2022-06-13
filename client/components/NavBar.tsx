@@ -15,6 +15,10 @@ export default function NavBar() {
       if (lastScrollY > window.scrollY) setHidden(false);
       else setHidden(true);
 
+      // // force nav bar to be displayed
+      // const navBar = document.getElementById('nav-bar');
+      // navBar.setAttribute('className', 'nav-bar-not-hidden')
+
       // reset the position of the last y value
       lastScrollY = window.scrollY;
     });
@@ -23,7 +27,7 @@ export default function NavBar() {
 
 
   return (
-    <div id='nav-bar' className={hidden ? 'nav-bar-hidden' : 'nav-bar-not-hidden'}>
+    <nav id='nav-bar' className={hidden ? 'nav-bar-hidden' : 'nav-bar-not-hidden'}>
       {/* BPI LOGO */}
       <div className='logo'>
         <img src='https://media-exp1.licdn.com/dms/image/C4E0BAQH5IaPdi44ymA/company-logo_200_200/0/1596762696687?e=1661990400&v=beta&t=m6cxcNKkMhrCP6T6zp6XN36bpEyLIpG1t-enpDcTiRg'/>
@@ -36,6 +40,7 @@ export default function NavBar() {
         <li><a href='#about'>ABOUT US</a></li>
         <li><a href='#services'>OUR SERVICES</a></li>
         <li><a href='#projects'>SELECT PROJECTS</a></li>
+        <li><a href='#testimonials'>TESTIMONIALS</a></li>
         <li><a href='#clients'>OUR CLIENTS</a></li>
         <div className='socials'>
           <a 
@@ -54,6 +59,6 @@ export default function NavBar() {
           </a>
         </div>    
       </ul>
-    </div>
+    </nav>
   );
 }

@@ -8,19 +8,19 @@ export default function Footer () {
       <div id='footer-content'>
         {/* OVERVIEW*/}
         <div id='footer-overview' className='footer-content-box'>
-          <p>Development Management, Project Monitoring and Real Estate Consulting</p>
+          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h3>
         </div>
 
         {/* CONTACT INFO */}
         <div id='footer-contact' className='footer-content-box'>
-          <h3>CONTACT US</h3>
+          <h3>Contact Us</h3>
           <p>info@bpiconsultants.ca</p>
           <p>416-432-5432</p>
         </div>
 
         {/* SOCIAL MEDIA */}
         <div id='footer-socials' className='footer-content-box'>
-          <h3>FOLLOW US</h3>
+          <h3>Follow Us</h3>
           <div id='footer-socials-logos'>
             <a 
               href='https://www.linkedin.com/company/bpi-consultants/'
@@ -39,10 +39,11 @@ export default function Footer () {
       </div>
 
       <hr className="solid" />
+      
       <div id='footer-meta'>
         <p>© 2022 BPI Consultants, Inc. All rights reserved.</p>
         <div id='jake-signoff'>
-          <p>Website designed and developed by Jake Bradbeer</p> 
+          <p>Website by Jake Bradbeer</p> 
           <p>|</p>
           <a href='https://github.com/JBradbeer' target='_blank' rel='noopener noreferrer'>
             <p>GitHub</p>
