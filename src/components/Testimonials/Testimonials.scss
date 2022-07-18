@@ -1,0 +1,77 @@
+@use '../../Styles/variables.scss' as v;
+
+#testimonials {
+  background-color: v.$bpilogo-blue;
+  color: #FFF;
+
+  width: 100%;
+  min-height: 100vh;
+  padding: v.$gutter;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 100%;
+
+
+
+  h3 {
+      font-size: 53px;
+      font-family: 'FFDINWebConBold', sans-serif;
+      letter-spacing: .02em;
+      line-height: 56px;
+
+      margin: 0;
+
+      max-width: 750px;
+  }
+
+  #reccomendation {
+      max-width: 1100px;
+
+      #rec-quote {
+          font-size: 27px;
+          font-style: italic;
+          font-weight: 100;
+          line-height: 52px;
+      }
+
+      #rec-name {
+          font-size: 22px;
+          text-transform: uppercase;
+          margin: 100px 0 0 0;
+
+      }
+
+      #rec-title {
+          font-size: 18px;
+          color: rgb(233, 233, 233);
+          text-transform: uppercase;
+          margin-top: 0;
+      }
+  }
+
+  #rec-btns {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+
+      .selected {
+          opacity: 80% !important;
+      }
+
+      .rec-btn {
+          background-color: white;
+          opacity: 50%;
+          border-radius: 50%;
+          border: none;
+          padding: 6px;
+
+          &:hover {
+              opacity: 100% !important;
+          }
+      }
+  }
+}

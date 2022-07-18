@@ -1,0 +1,51 @@
+@use '../../Styles/variables.scss' as v;
+
+#services {
+  padding: v.$gutter;
+  // margin: 0px;
+  background-color: #292F33;
+  color: white;
+//   min-height: 100vh;
+  text-align: center;
+
+  .cards {
+      @media only screen and (max-width: v.$tablet-width){
+          flex-direction: column;
+          justify-content: center;
+
+          .card {
+              width: 100% !important;
+          }
+      }
+
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      gap: 5%;
+
+      .card {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 33%;
+
+          .image {
+              border-radius: 50%;
+              overflow: hidden;
+              max-height: 200px;
+              max-width: 200px;
+              margin: 10% 0 5% 0;
+          }
+
+          .title {
+              padding: 0;
+              margin: 0;
+          }
+
+          .description {
+              margin: 0;
+              font-weight: 100;
+          }
+      }
+  }
+}

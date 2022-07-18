@@ -1,0 +1,106 @@
+@use '../../Styles/variables.scss' as v;
+
+#projects {
+    .grid {
+        display: grid;
+        gap: 4%;
+        grid-template-columns: 1fr 1fr;
+
+        @media only screen and (max-width: v.$laptop-width) {
+            grid-template-columns: 1fr;
+        }
+
+        .project {
+            .img-container {
+                position: relative;
+                text-align: center;
+                height: 50vh;
+                max-width: 100%;
+                // width: 100%;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    transition: 0.5s;
+                    object-fit: cover;
+                    object-position: bottom;
+                    vertical-align: middle;
+
+                    @media only screen and (max-width: 400px) {
+                        height: 30vh;
+                    }
+                }
+
+                .hidden-overlay {
+                    // padding: 10%;
+                    z-index: 1;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0px;
+                    opacity: 0;
+                    text-align: left;
+                    background-color:rgba(0, 0, 0, 0.8);
+                    color: beige;
+                    transition: 0.7s;
+
+                    .hidden-text {
+                        padding: 5%;
+                    }
+
+                    &:hover {
+                        // transition: 1.1s;
+                        opacity:1;
+                    }
+                }
+            }
+
+            .proj-top-text {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                gap: 10px;
+
+                line-height: normal;
+
+                @media only screen and (max-width: v.$tablet-width) {
+                    gap: 0px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .name {
+                    text-transform: uppercase;
+                    letter-spacing: .01em;
+                    text-align: left !important;
+                }
+
+                >* {
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+            @mixin project-minor-text {
+                font-weight: 100;
+                padding: 0;
+                margin: 0;
+            }
+
+            .proj-completion {
+                @include project-minor-text();
+                text-align: right;
+
+            }
+
+            .address {
+                @include project-minor-text();
+
+                display: flex;
+                justify-content: baseline;
+                vertical-align: top;
+            }
+        }
+    }
+}

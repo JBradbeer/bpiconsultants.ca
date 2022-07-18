@@ -1,0 +1,33 @@
+$phone-width: 576px;
+$tablet-width: 768px;
+$laptop-width: 992px;
+$large-width: 1200px;
+
+$gutter: 10px;
+
+$bpilogo-blue: #034f84;
+$bpilogo-grey: #555555;
+$bpilogo-green: #C3D69B;
+$bpilogo-brown: #948A54;
+$site-grey: #484f4f;
+$site-black: #212427;
+
+$nav-height: 65px;
+$navbar-width
+
+@mixin cleanList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin cleanLink {
+  a {
+      text-decoration:none !important;
+  }
+}
+
+@mixin partialWidth {
+  width: 70%;
+  max-width: 800px;
+}

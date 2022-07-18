@@ -1,0 +1,21 @@
+#landing {
+  // background-image: url('./images/glovebox-exterior2.jpeg');
+  background-image: url('https://uploads-ssl.webflow.com/58caaa4eca21145179969d22/5a7346c27df81800011489ff_Spectrum%20Square%20-%20Sweeny%26Co%20Architects%20-%20P06_LR%20-%20doublespace%20photography%20-%20exterior%20evening%20west%20facade.jpg');
+  background-size: cover;
+  background-position: bottom;
+  margin: auto;
+  height: 100px;
+  width: 100px;
+  background-color: red;;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #landing-title {
+      text-align: center;
+      background-color: white;
+      background: rgba(255,255,255,.6);
+      padding: 1rem;
+  }
+}

@@ -1,0 +1,104 @@
+@use '../../../Styles/variables.scss' as v;
+
+#desktop-navbar {
+    @media only screen and (max-width: $navbar-width) {
+        display: none;
+    }
+    
+    z-index: 1000;
+    $gap-distance: 35px;
+    box-shadow: 0 -10px 12px lightblue;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: v.$nav-height;
+
+    display: flex;
+    justify-content: space-between;
+
+    background-color: white;
+
+    .logo {
+        margin-left: $gap-distance;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+
+        .logo-text {
+            h1 {
+                font-size: 40px;
+                color: v.$site-black;
+            }
+
+        }
+
+        img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    ul {
+        @include v.cleanList;
+        @include v.cleanLink;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        flex-shrink: 2;
+
+        font-size: 1.1rem;
+        font-weight: 100;
+        text-align: center;
+        line-height: normal;
+
+        gap: $gap-distance;
+        padding: 0 $gap-distance;
+
+        a {
+            $nav-colour: v.$site-black;
+            color: $nav-colour;
+
+            &:visited {
+                color: $nav-colour
+            }
+
+            &:hover {
+                color: v.$bpilogo-blue;
+            }
+        }
+
+        .socials {
+            display: flex;
+            gap: calc($gap-distance / 5);
+
+            a {
+                display: flex;
+                flex-direction: column;
+                /* make main axis horizontal (default setting) */
+                justify-content: space-around;
+                /* center items horizontally, in this case */
+                align-items: center;
+            }
+
+            img {
+                width: 25px;
+                height: 25px;
+                opacity: 70%;
+            }
+        }
+    }
+
+    $nav-trans-speed: 1s;
+
+    &.nav-bar-hidden {
+        transition: $nav-trans-speed;
+        transform: translateY(calc(-1 * v.$nav-height));
+    }
+
+    &.nav-bar-not-hidden {
+        transition: $nav-trans-speed;
+    }
+}

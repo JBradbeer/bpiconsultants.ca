@@ -1,6 +1,6 @@
 # bpiconsultants.ca
 
-A **completely** over-engineered full-stack rebuild of bpiconsultants.ca, launching July 2022.
+A full-stack rebuild of bpiconsultants.ca, launching July 2022.
 
 
 ## Languages and Tools:
