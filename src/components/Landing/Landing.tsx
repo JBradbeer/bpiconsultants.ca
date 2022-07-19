@@ -1,10 +1,11 @@
-import React from 'react';
-// import BPILogo from '../images/bpilogo.png';
+import './Landing.scss';
 
-export default function Landing() {
+const Landing = () => {
   return (
     <section id='landing'>
       <h1 id='landing-title'>REAL ESTATE DEVELOPMENT ADVISORY</h1>
     </section>
   );
 }
+
+export default Landing;

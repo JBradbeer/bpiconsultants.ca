@@ -1,0 +1,14 @@
+@use '../../styles/variables.scss' as v;
+
+#key-facts-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  text-align: center;
+  padding: 0 0 20px 0;
+
+  @media only screen and (max-width: v.$tablet-width) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

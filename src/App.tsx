@@ -1,20 +1,20 @@
 import './App.scss';
-import MobileNav from './components/Navigation/Mobile/MobileNav'; 
-import DesktopNav from './components/Navigation/Desktop/DesktopNav';
-// import Landing from './components/Landing/Landing';
+
 import Projects from './components/Projects/Projects';
 import Services from './components/Services/Services';
 import Footer from './components/Footer/Footer';
-import Testimonials from './components/Testimonials/Testimonials'
+import Testimonials from './components/Testimonials/Testimonials';
+import Navigation from './components/Navigation/Navigation';
+import About from './components/About/About';
+import Landing from './components/Landing/Landing';
 
 const App = () => {
   return (
     <>
-      <div id='navigation'>
-        <MobileNav />
-        <DesktopNav />
-      </div>
+      <Navigation />
       <div id='content'>
+        <Landing />
+        <About />
         <Services />
         <Projects />
         <Testimonials />
@@ -22,6 +22,6 @@ const App = () => {
       </div>
     </>
   );
-}
+};
 
 export default App;
