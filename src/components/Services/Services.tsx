@@ -9,7 +9,7 @@ const Services = () => {
 
   return (
     <section id='services'>
-      <h2 className='section-header'>WHAT WE OFFER</h2>
+      <h2 className='content-header'>WHAT WE OFFER</h2>
       <p>
         Sunt esse qui nulla consectetur aliquip commodo ea aute cillum sint excepteur adipisicing aliquip culpa. Cillum
         incididunt minim occaecat exercitation eiusmod ipsum ipsum sunt do.
