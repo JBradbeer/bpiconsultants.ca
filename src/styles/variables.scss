@@ -13,7 +13,7 @@ $site-grey: #484f4f;
 $site-black: #212427;
 
 $nav-height: 65px;
-$navbar-width
+$navbar-bp-width: 900px;
 
 @mixin cleanList {
   list-style-type: none;
