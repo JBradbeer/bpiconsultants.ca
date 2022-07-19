@@ -1,0 +1,110 @@
+@use '../../../styles/variables.scss' as v;
+
+#mobile-navbar {
+  @media only screen and (min-width: calc(v.$navbar-bp-width + 1px)) {
+    display: none;
+  }
+
+  // height: 100vh;
+
+  #mobile-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin:3px;
+    height: v.$nav-height;
+
+    .logo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+
+      .logo-text {
+        h1 {
+          font-size: 40px;
+          color: v.$site-black;
+        }
+      }
+
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
+  #mobile-dropdown {
+    $gap-distance: 35px;
+
+    padding: 30px 30px 150px 30px;
+
+    // drop the menu down slowly
+    transition: 1s;
+    // transform: translateY(calc(1 * calc(100vh)));
+
+    background-color: v.$bpilogo-blue;
+    height: calc(100vh - v.$nav-height);
+
+    ul {
+      @include v.cleanList;
+      @include v.cleanLink;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+
+      font-size: 2rem;
+      text-align: center;
+      line-height: normal;
+
+      gap: $gap-distance;
+      padding: 0 $gap-distance;
+
+      a {
+        color: white;
+        font-weight: 900;
+      }
+
+      #mobile-nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 70%
+      }
+
+      .socials {
+        display: flex;
+        gap: 30px;
+
+        a {
+          display: flex;
+          flex-direction: column;
+          /* make main axis horizontal (default setting) */
+          justify-content: space-around;
+          /* center items horizontally, in this case */
+          align-items: center;
+        }
+
+        .facebook > img{
+          width: 63px;
+          height: 64px;
+        }
+
+        .linkedin > img{
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+
+    
+    &.hidden {
+      display: none;
+      // transform: translateY(calc(-1 * 100%));
+    }
+  }
+}

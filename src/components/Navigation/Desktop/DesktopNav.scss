@@ -1,24 +1,19 @@
 @use '../../../Styles/variables.scss' as v;
 
 #desktop-navbar {
-    @media only screen and (max-width: $navbar-width) {
+    @media only screen and (max-width: v.$navbar-bp-width) {
         display: none;
     }
-    
-    z-index: 1000;
-    $gap-distance: 35px;
-    box-shadow: 0 -10px 12px lightblue;
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    &.nav-bar-hidden {
+        transform: translateY(calc(-1 * v.$nav-height));
+    }
+
+    $gap-distance: 35px;
     height: v.$nav-height;
 
     display: flex;
     justify-content: space-between;
-
-    background-color: white;
 
     .logo {
         margin-left: $gap-distance;
@@ -89,16 +84,5 @@
                 opacity: 70%;
             }
         }
-    }
-
-    $nav-trans-speed: 1s;
-
-    &.nav-bar-hidden {
-        transition: $nav-trans-speed;
-        transform: translateY(calc(-1 * v.$nav-height));
-    }
-
-    &.nav-bar-not-hidden {
-        transition: $nav-trans-speed;
     }
 }

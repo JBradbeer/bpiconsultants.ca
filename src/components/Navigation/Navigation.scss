@@ -1,0 +1,19 @@
+@use '../../styles/variables.scss' as v;
+
+#navigation {
+  transition: 1s;
+  z-index: 3000;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background-color: white;
+
+  &.nav-bar-hidden {
+    transform: translateY(calc(-1 * 100%));
+  }
+}
+
+// ! FIX EM NEED TO MAKE NAV BAR TRANSFORM HEIGHT PROPORTIONAL TO HEIGHT 

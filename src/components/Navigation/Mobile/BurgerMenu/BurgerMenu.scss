@@ -1,15 +1,16 @@
+@use '../../../../styles/variables.scss' as v;
+
 * {
   margin: 0;
   padding: 0; 
 }
 
-/* Icon 1 */
 
-#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
-  width: 60px;
-  height: 45px;
-  position: relative;
-  margin: 50px auto;
+#nav-icon3 {
+  width: 28px;
+  height: 30px;
+  // position: relative;
+  // margin: 50px auto;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -21,13 +22,13 @@
   cursor: pointer;
 }
 
-#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+#nav-icon3 span {
   display: block;
   position: absolute;
-  height: 9px;
+  height: 3px;
   width: 100%;
-  background: #d3531a;
-  border-radius: 9px;
+  background: v.$bpilogo-blue;
+
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -48,15 +49,15 @@
 }
 
 #nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
-  top: 18px;
+  top: 11px;
 }
 
 #nav-icon3 span:nth-child(4) {
-  top: 36px;
+  top: 22px;
 }
 
 #nav-icon3.open span:nth-child(1) {
-  top: 18px;
+  top: 11px;
   width: 0%;
   left: 50%;
 }
@@ -76,7 +77,7 @@
 }
 
 #nav-icon3.open span:nth-child(4) {
-  top: 18px;
+  top: 11px;
   width: 0%;
   left: 50%;
 }

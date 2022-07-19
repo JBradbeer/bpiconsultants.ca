@@ -1,25 +1,8 @@
-import React, { useEffect, useState } from 'react';
-
 import './DesktopNav.scss';
 
-export default function NavBar() {
-  let [hidden, setHidden] = useState<boolean>(false);
-
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
-
-    // if user scrolls up show nav bar, if user scrolls down hide nav bar
-    window.addEventListener('scroll', function () {
-      if (lastScrollY > window.scrollY) setHidden(false);
-      else setHidden(true);
-
-      // reset the position of the last y value
-      lastScrollY = window.scrollY;
-    });
-  }, []);
-
+const DesktopNav = () => {
   return (
-    <nav id='navbar' className={hidden ? 'nav-bar-hidden' : 'nav-bar-not-hidden'}>
+    <nav id='desktop-navbar'>
       {/* BPI LOGO */}
       <div className='logo'>
         <img src='https://media-exp1.licdn.com/dms/image/C4E0BAQH5IaPdi44ymA/company-logo_200_200/0/1596762696687?e=1661990400&v=beta&t=m6cxcNKkMhrCP6T6zp6XN36bpEyLIpG1t-enpDcTiRg' />
@@ -56,3 +39,5 @@ export default function NavBar() {
     </nav>
   );
 }
+
+export default DesktopNav;
