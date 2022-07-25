@@ -21,3 +21,9 @@ export type Reccomendation = {
   name: string,
   title: string
 }
+
+export type Client = {
+  name: string;
+  link: string | undefined;
+  img:  string | null;
+}

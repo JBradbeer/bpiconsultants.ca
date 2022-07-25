@@ -1,0 +1,40 @@
+@use '../../Styles/variables.scss' as v;
+
+#clients {
+    padding: v.$gutter;
+
+    #client-list {
+        padding: 0;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px; 
+
+        @media only screen and (max-width: 900px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .client {
+            display: flex;
+            justify-content: center;
+
+            a {
+                img {
+                    max-height: 15vh;
+                    width: 100%;
+                    transition: 0.5s;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#dave-card {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
