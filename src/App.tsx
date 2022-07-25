@@ -7,6 +7,7 @@ import Testimonials from './components/Testimonials/Testimonials';
 import Navigation from './components/Navigation/Navigation';
 import About from './components/About/About';
 import Landing from './components/Landing/Landing';
+import Clients from './components/Clients/Clients';
 
 const App = () => {
   return (
@@ -14,10 +15,11 @@ const App = () => {
       <Navigation />
       <div id='content'>
         <Landing />
-        <About />
+        {/* <About /> */}
         <Services />
         <Projects />
         <Testimonials />
+        <Clients />
         <Footer />
       </div>
     </>
