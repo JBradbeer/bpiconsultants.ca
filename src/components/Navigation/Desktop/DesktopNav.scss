@@ -1,4 +1,5 @@
 @use '../../../Styles/variables.scss' as v;
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 #desktop-navbar {
     @media only screen and (max-width: v.$navbar-bp-width) {
@@ -10,13 +11,13 @@
     }
 
     $gap-distance: 35px;
-    height: v.$nav-height;
+    // height: v.$nav-height;
 
     display: flex;
     justify-content: space-between;
+    padding: 0 1.5% 0 1.5%;
 
-    .logo {
-        margin-left: $gap-distance;
+    #d-nav-logo {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -27,7 +28,6 @@
                 font-size: 40px;
                 color: v.$site-black;
             }
-
         }
 
         img {
@@ -36,53 +36,100 @@
         }
     }
 
-    ul {
-        @include v.cleanList;
-        @include v.cleanLink;
+    #d-nav-links {
         display: flex;
-        justify-content: right;
+        justify-content: space-between;
         align-items: center;
-        flex-shrink: 2;
+        
+        ul {
+            @include v.cleanList;
+            @include v.cleanLink;
 
-        font-size: 1.1rem;
-        font-weight: 100;
-        text-align: center;
-        line-height: normal;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-        gap: $gap-distance;
-        padding: 0 $gap-distance;
+            font-size: 1.1rem;
+            font-weight: 100;
+            text-align: center;
+            line-height: normal;
 
-        a {
-            $nav-colour: v.$site-black;
-            color: $nav-colour;
+            gap: $gap-distance;
+            padding: 0 $gap-distance;
+            
 
-            &:visited {
-                color: $nav-colour
-            }
-
-            &:hover {
-                color: v.$bpilogo-blue;
+            a {
+                color: v.$site-black;
             }
         }
 
-        .socials {
-            display: flex;
-            gap: calc($gap-distance / 5);
+        ul li a {
+            position: relative;
+        }
+        
+        ul li a:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 0%;
+            content: '.';
+            color: transparent;
+            background: #aaa;
+            height: 1px;
+            transition: 0.5s;
+        }
+        
+        ul li a:hover:after {
+            width: 100%;
+        }
+        
+    }
 
-            a {
-                display: flex;
-                flex-direction: column;
-                /* make main axis horizontal (default setting) */
-                justify-content: space-around;
-                /* center items horizontally, in this case */
-                align-items: center;
+    #d-nav-socials {
+        @include v.cleanList;
+        @include v.cleanLink;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 37px;
+            height: 37px;
+            background-color: transparent;
+            // border-radius: 50%;
+            -o-transition: .5s;
+            -ms-transition: .5s;
+            -moz-transition: .5s;
+            -webkit-transition: .5s;
+            transition: .1s;
+
+            i {
+                color: v.$site-black;
+                font-size: larger;
             }
 
-            img {
-                width: 25px;
-                height: 25px;
-                opacity: 70%;
+            &.facebook {
+                background-color: #3d5b99;
+
+                i {
+                    color: white;
+                }
+
+            }
+
+            &.linkedin {
+                background-color: #0073a4;
+
+                i {
+                    color: white;
+                }
             }
         }
     }
 }
+
