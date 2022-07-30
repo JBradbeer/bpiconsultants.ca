@@ -20,7 +20,7 @@ const Testimonials = () => {
 
   return (
     <section id='testimonials'>
-      <h3>HEAR WHAT OUR CLIENTS HAVE TO SAY</h3>
+      <h3>WHAT OUR CLIENTS HAVE TO SAY</h3>
       <div id='reccomendation'>
         <p id='rec-quote'>{reccomendations[index].quote}</p>
         <h4 id='rec-name'>{reccomendations[index].name + ', ' + reccomendations[index].company}</h4>
