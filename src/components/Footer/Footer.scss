@@ -10,6 +10,21 @@ footer {
     background-color: v.$site-black;
     color: $footer-colour;
 
+    #footer-logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 0 20px 0;
+        gap: 5px;
+
+        svg {
+            height: 1.5em;
+            width: auto;
+        }
+
+        ;
+    }
+
     #footer-content {
         display: grid;
         grid-template-columns: 3fr 1fr 1fr;
@@ -32,14 +47,41 @@ footer {
 
 
         #footer-socials {
-            #footer-socials-logos {
+            ul {
                 display: flex;
                 flex-direction: row;
                 gap: 10px;
 
-                img {
-                    width: 40px;
-                    height: 40px;
+                li {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    a {
+                        width: 37px;
+                        height: 37px;
+
+                        border: solid white;
+                        border-radius: 50%;
+
+                        i {
+                            color: white;
+                            font-size: larger;
+
+                            position: relative;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+
+                        &:hover {
+                            background-color: white;
+
+                            i {
+                                color: v.$site-black;
+                            }
+                        }
+                    }
                 }
             }
         }
