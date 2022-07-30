@@ -115,18 +115,34 @@
                 }
 
                 &.facebook {
-                    background-color: #3d5b99;
+                    border: solid #3d5b99;
 
                     i {
-                        color: white;
+                        color: #3d5b99;
+                    }
+
+                    &:hover {
+                        background-color: #3d5b99;
+
+                        i {
+                            color: white;
+                        }
                     }
                 }
 
                 &.linkedin {
-                    background-color: #0073a4;
+                    border: solid #0073a4;
 
                     i {
-                        color: white;
+                        color: #0073a4;
+                    }
+
+                    &:hover {
+                        background-color: #0073a4;
+
+                        i {
+                            color: white;
+                        }
                     }
                 }
             }
