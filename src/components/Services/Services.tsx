@@ -25,10 +25,10 @@ const Services = () => {
           </div>
         ))}
       </div>
-      <p>
+      {/* <p>
         Excepteur adipisicing aliquip culpa. incididunt minim occaecat exercitation eiusmod ipsum ipsum sunt do.
         Cillum sunt esse qui nulla.
-      </p>
+      </p> */}
     </section>
   );
 };

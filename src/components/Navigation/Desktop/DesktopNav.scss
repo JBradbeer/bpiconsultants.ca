@@ -40,7 +40,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
+
         ul {
             @include v.cleanList;
             @include v.cleanLink;
@@ -56,7 +56,7 @@
 
             gap: $gap-distance;
             padding: 0 $gap-distance;
-            
+
 
             a {
                 color: v.$site-black;
@@ -66,7 +66,7 @@
         ul li a {
             position: relative;
         }
-        
+
         ul li a:after {
             position: absolute;
             bottom: 0;
@@ -80,11 +80,11 @@
             height: 1px;
             transition: 0.5s;
         }
-        
+
         ul li a:hover:after {
             width: 100%;
         }
-        
+
     }
 
     #d-nav-socials {
@@ -94,42 +94,42 @@
         align-items: center;
         gap: 5px;
 
-        .icon {
+
+        li {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 37px;
-            height: 37px;
-            background-color: transparent;
-            // border-radius: 50%;
-            -o-transition: .5s;
-            -ms-transition: .5s;
-            -moz-transition: .5s;
-            -webkit-transition: .5s;
-            transition: .1s;
 
-            i {
-                color: v.$site-black;
-                font-size: larger;
-            }
-
-            &.facebook {
-                background-color: #3d5b99;
+            a {
+                width: 37px;
+                height: 37px;
 
                 i {
-                    color: white;
+                    color: v.$site-black;
+                    font-size: larger;
+
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                 }
 
-            }
+                &.facebook {
+                    background-color: #3d5b99;
 
-            &.linkedin {
-                background-color: #0073a4;
+                    i {
+                        color: white;
+                    }
+                }
 
-                i {
-                    color: white;
+                &.linkedin {
+                    background-color: #0073a4;
+
+                    i {
+                        color: white;
+                    }
                 }
             }
         }
     }
 }
-

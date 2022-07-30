@@ -9,7 +9,7 @@ const Footer = () => {
       <div id='footer-content'>
         {/* OVERVIEW*/}
         <div id='footer-overview' className='footer-content-box'>
-          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h3>
+          <h3>BPI Consultants is a boutique consulting company specializing in advisory and management services for the real estate and construction sectors.</h3>
         </div>
 
         {/* CONTACT INFO */}

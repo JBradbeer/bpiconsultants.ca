@@ -32,13 +32,13 @@ const DesktopNav = () => {
       </nav>
       {/* SOCIALS */}
       <ul id='d-nav-socials'>
-        <li className='icon facebook'>
-          <a href='https://www.facebook.com/bpiconsultants.ca/' target='_blank' rel='noopener noreferrer'>
+        <li>
+          <a className='facebook' href='https://www.facebook.com/bpiconsultants.ca/' target='_blank' rel='noopener noreferrer'>
             <i className='fa fa-facebook'></i>
           </a>
         </li>
-        <li className='icon linkedin'>
-          <a href='https://www.linkedin.com/company/bpi-consultants/' target='_blank' rel='noopener noreferrer'>
+        <li>
+          <a className='linkedin' href='https://www.linkedin.com/company/bpi-consultants/' target='_blank' rel='noopener noreferrer'>
             <i className='fa fa-linkedin'></i>
           </a>
         </li>
