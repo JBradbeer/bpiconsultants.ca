@@ -18,29 +18,31 @@ body {
   box-sizing: border-box;
 }
 
-section > * {
+section>* {
   $tb-margin: 3%;
 
-  // @media only screen and (max-width: v.$phone-width) {
-  //   margin: $tb-margin 3%;
-  // }
-
-  // @media only screen and (max-width: v.$tablet-width) {
-  //   margin: $tb-margin 5%;
-  // }
-
-  // @media only screen and (max-width: v.$laptop-width) {
-  //   margin: $tb-margin 8%;
-  // }
-
-  @media only screen and (max-width: v.$large-width) {
-    margin: $tb-margin 9%;
-  }
   @media only screen and (min-width: v.$large-width) {
     max-width: 1100px;
     margin: $tb-margin auto;
   }
+
+  @media only screen and (max-width: v.$large-width) {
+    margin: $tb-margin 9%;
+  }
+
+  @media only screen and (max-width: v.$laptop-width) {
+    margin: $tb-margin 8%;
+  }
+
+  @media only screen and (max-width: v.$tablet-width) {
+    margin: $tb-margin 6%;
+  }
+
+  @media only screen and (max-width: v.$phone-width) {
+    margin: $tb-margin 5%;
+  }
 }
+
 
 .content-header {
   text-align: center;
