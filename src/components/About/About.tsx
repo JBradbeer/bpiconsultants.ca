@@ -20,13 +20,13 @@ const About = () => {
         {/* DAVE CARD */}
       </div>
       <div id='dave-card'>
+      {/* <img src='https://www.bpiconsultants.ca/images/david.jpg' alt='David Bradbeer'/> */}
         <p>
-          BPI Consultants provides development management services. The company’s principal is J. David Bradbeer,
+          The company’s principal is J. David Bradbeer,
           P.Eng., MBA. David has over 30 years experience in various branches of real estate and experience in all
           sectors of real estate including commercial, medical, industrial, institutional, residential, retail, LEED and
           P3’s.
         </p>
-        {/* <img src='https://www.bpiconsultants.ca/images/david.jpg' /> */}
       </div>
     </section>
   );
