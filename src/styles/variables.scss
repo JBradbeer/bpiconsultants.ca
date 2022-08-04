@@ -12,7 +12,7 @@ $bpilogo-brown: #948A54;
 $site-grey: #484f4f;
 $site-black: #212427;
 
-$nav-height: 65px;
+$nav-height: 50px;
 $navbar-bp-width: 900px;
 
 $std-line-height: 2;
@@ -27,9 +27,4 @@ $std-line-height: 2;
   a {
       text-decoration:none !important;
   }
-}
-
-@mixin partialWidth {
-  width: 70%;
-  max-width: 800px;
 }

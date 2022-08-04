@@ -1,77 +1,94 @@
 @use '../../Styles/variables.scss' as v;
 
 #testimonials {
-  background-color: v.$bpilogo-blue;
-  color: #FFF;
+    background-color: v.$bpilogo-blue;
+    color: #FFF;
 
-  width: 100%;
-  min-height: 100vh;
-  padding: v.$gutter;
+    width: 100%;
+    min-height: 100vh;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
+    text-align: center;
 
 
-  h3 {
-      font-size: 53px;
-      font-family: 'FFDINWebConBold', sans-serif;
-      letter-spacing: .02em;
-      line-height: 56px;
 
-      margin: 0;
+    h3 {
+        font-size: 2rem;
+        font-family: 'FFDINWebConBold', sans-serif;
+        //   letter-spacing: .02em;
+        //   line-height: 56px;
 
-      max-width: 750px;
-  }
+        margin: 0;
+    }
 
-  #reccomendation {
-      max-width: 1100px;
+    #reccomendation {
+        #rec-quote {
+            font-size: 2rem;
+            font-style: italic;
+            font-weight: 100;
+            line-height: 4rem;
 
-      #rec-quote {
-          font-size: 27px;
-          font-style: italic;
-          font-weight: 100;
-          line-height: 52px;
-      }
+            @media only screen and (min-width: v.$large-width) {
 
-      #rec-name {
-          font-size: 22px;
-          text-transform: uppercase;
-          margin: 100px 0 0 0;
+            }
 
-      }
+            @media only screen and (max-width: v.$large-width) {
+                
+            }
 
-      #rec-title {
-          font-size: 18px;
-          color: rgb(233, 233, 233);
-          text-transform: uppercase;
-          margin-top: 0;
-      }
-  }
+            @media only screen and (max-width: v.$laptop-width) {
+                
+            }
 
-  #rec-btns {
-      display: flex;
-      flex-direction: row;
-      gap: 10px;
+            @media only screen and (max-width: v.$tablet-width) {
+                
+            }
 
-      .selected {
-          opacity: 80% !important;
-      }
+            @media only screen and (max-width: v.$phone-width) {
+                font-size: 1.7rem;
+                line-height: 3rem;
+                height: 60vh;
+            }
+        }
 
-      .rec-btn {
-          background-color: white;
-          opacity: 50%;
-          border-radius: 50%;
-          border: none;
-          padding: 6px;
+        #rec-name {
+            font-size: 2rem;
+            text-transform: uppercase;
+            //   margin: 100px 0 0 0;
 
-          &:hover {
-              opacity: 100% !important;
-          }
-      }
-  }
+        }
+
+        #rec-title {
+            font-size: 1.3rem;
+            color: rgb(233, 233, 233);
+            text-transform: uppercase;
+            margin-top: 0;
+        }
+    }
+
+    #rec-btns {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        .selected {
+            opacity: 80% !important;
+        }
+
+        .rec-btn {
+            background-color: white;
+            opacity: 50%;
+            border-radius: 50%;
+            border: none;
+            padding: 6px;
+
+            &:hover {
+                opacity: 100% !important;
+            }
+        }
+    }
 }
