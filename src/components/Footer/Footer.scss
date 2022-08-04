@@ -18,7 +18,7 @@ footer {
         gap: 5px;
 
         svg {
-            height: 1.5em;
+            height: 1.3em;
             width: auto;
         }
 
@@ -30,6 +30,7 @@ footer {
         grid-template-columns: 3fr 1fr 1fr;
         gap: 10%;
         padding-bottom: 40px;
+        text-align: left;
 
         h3,
         p {
