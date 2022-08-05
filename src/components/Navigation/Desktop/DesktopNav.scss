@@ -11,7 +11,7 @@
     }
 
     $gap-distance: 35px;
-    // height: v.$nav-height;
+    height: v.$nav-height;
 
     display: flex;
     justify-content: space-between;
@@ -19,21 +19,20 @@
 
     #d-nav-logo {
         display: flex;
-        flex-direction: row;
+        // flex-direction: row;
         align-items: center;
-        gap: 10px;
+        gap: 7px;
 
-        .logo-text {
-            h1 {
-                font-size: 40px;
-                color: v.$site-black;
-            }
+        h2 {
+            // font-size: ;
+            color: v.$site-black;
         }
 
-        img {
-            width: 60px;
-            height: 60px;
+        svg {
+            height: 1.3em;
+            width: auto;
         }
+    
     }
 
     #d-nav-links {
@@ -101,12 +100,12 @@
             align-items: center;
 
             a {
-                width: 37px;
-                height: 37px;
+                width: 32px;
+                height: 32px;
 
                 i {
                     color: v.$site-black;
-                    font-size: larger;
+                    font-size: large;
 
                     position: relative;
                     top: 50%;
@@ -115,10 +114,10 @@
                 }
 
                 &.facebook {
-                    border: solid #3d5b99;
+                    border: solid black;
 
                     i {
-                        color: #3d5b99;
+                        color: black;
                     }
 
                     &:hover {
@@ -131,10 +130,10 @@
                 }
 
                 &.linkedin {
-                    border: solid #0073a4;
+                    border: solid black;
 
                     i {
-                        color: #0073a4;
+                        color: black;
                     }
 
                     &:hover {

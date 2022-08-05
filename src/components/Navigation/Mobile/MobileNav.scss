@@ -5,48 +5,56 @@
     display: none;
   }
 
-  #mobile-topbar {
+  #m-nav-topbar {
+    z-index: 9999999;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     margin: 0 15px;
-    height: 50px;
+    height: v.$nav-height;
 
-    .logo {
+    #m-nav-logo {
       display: flex;
-      flex-direction: row;
       align-items: center;
-      gap: 10px;
-      
-      .logo-text {
-        h1 {
-          font-size: 30px;
-          color: v.$site-black;
-        }
+      gap: 7px;
+
+      h2 {
+        color: v.$site-black;
       }
 
-      img {
-        border: solid red;
-        width: 40px;
-        height: 40px;
+      svg {
+        height: 1.3em;
+        width: auto;
       }
     }
   }
 
-  #mobile-dropdown {
+  #m-nav-dropdown {
     $gap-distance: 35px;
 
     padding: 30px 30px 150px 30px;
 
     // drop the menu down slowly
-    transition: 1s;
-    // transform: translateY(calc(1 * calc(100vh)));
+    transition-property: translateX; 
+    transition-duration: 1s; 
+    transition-timing-function: ease-out; 
+  
 
     background-color: v.$bpilogo-blue;
     height: calc(100vh - v.$nav-height);
 
-    ul {
+    &.hidden {
+      // display: none;
+      transform: translateX(calc(1 * calc(100vw)));
+      // height: 0px;
+    }
+
+    #m-nav-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
       @include v.cleanList;
       @include v.cleanLink;
 
@@ -54,10 +62,10 @@
       justify-content: space-between;
       align-items: center;
       flex-direction: column;
-      height: 100%;
+      gap:5%;
 
-      font-size: 2rem;
-      text-align: center;
+      font-size: 1.8rem;
+      text-align: left;
       line-height: normal;
 
       gap: $gap-distance;
@@ -67,43 +75,36 @@
         color: white;
         font-weight: 900;
       }
-
-      #mobile-nav-links {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 70%
-      }
-
-      .socials {
-        display: flex;
-        gap: 30px;
-
-        a {
-          display: flex;
-          flex-direction: column;
-          /* make main axis horizontal (default setting) */
-          justify-content: space-around;
-          /* center items horizontally, in this case */
-          align-items: center;
-        }
-
-        .facebook > img{
-          width: 63px;
-          height: 64px;
-        }
-
-        .linkedin > img{
-          width: 60px;
-          height: 60px;
-        }
-      }
     }
 
-    
-    &.hidden {
-      display: none;
-      // transform: translateY(calc(-1 * 100%));
+    #m-nav-socials {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          width: 50px;
+          height: 50px;
+
+          border: solid white;
+          border-radius: 50%;
+
+          i {
+            color: white;
+            font-size: 3rem;
+
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
     }
   }
 }

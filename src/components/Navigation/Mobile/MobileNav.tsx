@@ -18,52 +18,78 @@ const MobileNav = () => {
 
   return (
     <div id='mobile-navbar'>
-      <div id='mobile-topbar'>
-        <div className='logo'>
-          <img src='https://media-exp1.licdn.com/dms/image/C4E0BAQH5IaPdi44ymA/company-logo_200_200/0/1596762696687?e=1661990400&v=beta&t=m6cxcNKkMhrCP6T6zp6XN36bpEyLIpG1t-enpDcTiRg' />
-          <div className='logo-text'>
-            <h1>BPI</h1>
-          </div>
+      <div id='m-nav-topbar'>
+        <div id='m-nav-logo'>
+          <svg
+            cache-id='bcca707f022949eeb3c0afd0113a2537'
+            id='eV6r48seu3j1'
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 250 200'
+            shape-rendering='geometricPrecision'
+            text-rendering='geometricPrecision'
+          >
+            <rect width='50' height='50' rx='0' ry='0' fill='#555' stroke-width='0' />
+            <rect width='50' height='50' rx='0' ry='0' transform='translate(150 0)' fill='#95b3d7' stroke-width='0' />
+            <rect width='50' height='50' rx='0' ry='0' transform='translate(50 50)' fill='#c3d59b' stroke-width='0' />
+            <rect width='50' height='50' rx='0' ry='0' transform='translate(200 150)' fill='#c3d59b' stroke-width='0' />
+            <rect width='50' height='50' rx='0' ry='0' transform='translate(150 150)' fill='#95b3d7' stroke-width='0' />
+            <rect width='50' height='50' rx='0' ry='0' transform='translate(200 100)' fill='#555' stroke-width='0' />
+            <rect width='50' height='50' rx='0' ry='0' transform='translate(150 100)' fill='#948a54' stroke-width='0' />
+            <rect width='50' height='50' rx='0' ry='0' transform='translate(0 100)' fill='#948a54' stroke-width='0' />
+          </svg>
+          <h2>BPI</h2>
         </div>
         <BurgerMenu menuOnClick={menuOnClick} />
       </div>
-      <div id='mobile-dropdown' className={isOpen ? '' : 'hidden'}>
-        <ul>
-          <div id='mobile-nav-links'>
-            <li>
-              <a href='#about' onClick={menuOnClick}>
-                ABOUT
-              </a>
-            </li>
-            <li>
-              <a href='#services' onClick={menuOnClick}>
-                SERVICES
-              </a>
-            </li>
-            <li>
-              <a href='#projects' onClick={menuOnClick}>
-                PROJECTS
-              </a>
-            </li>
-            <li>
-              <a href='#testimonials' onClick={menuOnClick}>
-                TESTIMONIALS
-              </a>
-            </li>
-            <li>
-              <a href='#clients' onClick={menuOnClick}>
-                CLIENTS
-              </a>
-            </li>
-          </div>
-          <div className='socials'>
-            <a className='linkedin' href='https://www.linkedin.com/company/bpi-consultants/' target='_blank' rel='noopener noreferrer'>
-              <img src='https://www.nicepng.com/png/full/375-3755097_join-the-conversation-linkedin-logo-white-png-transparent.png' />
+      <div id='m-nav-dropdown' className={isOpen ? '' : 'hidden'}>
+        <ul id='m-nav-links'>
+          <li>
+            <a href='#about' onClick={menuOnClick}>
+              ABOUT
             </a>
-            <a className='facebook' href='https://www.facebook.com/bpiconsultants.ca/' target='_blank' rel='noopener noreferrer'>
-              <img src='https://nrgteleresources.com/wp-content/uploads/facebook-logo-white.png' />
+          </li>
+          <li>
+            <a href='#services' onClick={menuOnClick}>
+              SERVICES
             </a>
-          </div>
+          </li>
+          <li>
+            <a href='#projects' onClick={menuOnClick}>
+              PROJECTS
+            </a>
+          </li>
+          <li>
+            <a href='#testimonials' onClick={menuOnClick}>
+              TESTIMONIALS
+            </a>
+          </li>
+          <li>
+            <a href='#clients' onClick={menuOnClick}>
+              CLIENTS
+            </a>
+          </li>
+        </ul>
+        <ul id='m-nav-socials'>
+          <li>
+            <a
+              className='facebook'
+              href='https://www.facebook.com/bpiconsultants.ca/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <i className='fa fa-facebook'></i>
+            </a>
+          </li>
+          <li>
+            <a
+              className='linkedin'
+              href='https://www.linkedin.com/company/bpi-consultants/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <i className='fa fa-linkedin'></i>
+            </a>
+          </li>
         </ul>
       </div>
     </div>

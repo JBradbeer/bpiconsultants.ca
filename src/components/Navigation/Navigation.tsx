@@ -5,7 +5,7 @@ import DesktopNav from './Desktop/DesktopNav';
 import MobileNav from './Mobile/MobileNav';
 
 const Navigation = () => {
-  let [hidden, setHidden] = useState<boolean>(true);
+  let [hidden, setHidden] = useState<boolean>(false);
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -21,7 +21,7 @@ const Navigation = () => {
   return (
     <div id='navigation' className={hidden ? 'nav-bar-hidden' : 'nav-bar-not-hidden'}>
       <DesktopNav />
-      <MobileNav />
+      {/* <MobileNav /> */}
     </div>
   );
 };
