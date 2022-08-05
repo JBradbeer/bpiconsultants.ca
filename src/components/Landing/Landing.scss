@@ -1,20 +1,66 @@
+@use '../../styles/variables.scss' as v;
+
+
+
 #landing {
-  // background-image: url('./images/glovebox-exterior2.jpeg');
-  background-image: url('https://uploads-ssl.webflow.com/58caaa4eca21145179969d22/5a7346c27df81800011489ff_Spectrum%20Square%20-%20Sweeny%26Co%20Architects%20-%20P06_LR%20-%20doublespace%20photography%20-%20exterior%20evening%20west%20facade.jpg');
-  background-size: cover;
-  background-position: bottom;
-  margin: auto;
   height: 100vh;
   width: auto;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-  #landing-title {
+  >* {
+    margin: 0;
+    padding: 0;
+  }
+
+  .cover {
+    padding: 70px;
+    // background-color: v.$site-black;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: v.$site-black;
+
+    #landing-title {
       text-align: center;
-      background-color: white;
-      background: rgba(255,255,255,.6);
       padding: 1rem;
+      color: v.$bpilogo-brown;
+    }
+
+    button {
+      border-radius: 0px;
+      border: solid v.$site-black;
+      background-color: v.$bpilogo-green;;
+      color: v.$bpilogo-blue;
+      align-self: center;
+      padding: 20px 100px 18px 100px;
+      color: v.$site-black;
+      font-family: arial;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+      transition: all 0.1s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        // color: white;
+        // border: solid v.$bpilogo-blue;
+        background: v.$bpilogo-green;
+      }
+
+      &:active {
+        transform: scale(1.025);
+      }
+    }
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
   }
 }
